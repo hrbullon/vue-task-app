@@ -2,7 +2,7 @@
     <div class="container">
         <div class="p-5 mb-4 bg-light rounded-3">
             <TaskTitle title="Lista de Tareas"></TaskTitle>
-            <TaskForm @add-task="(value) => addTask(value)" :modelValue="model.task"></TaskForm>
+            <TaskForm @add-task="(value) => addTask(value)" ></TaskForm>
             <TaskList :items="tasks" ></TaskList>
         </div> 
     </div>
@@ -44,8 +44,6 @@ export default {
     },
     methods: {
         addTask(value) {
-
-            console.log(value);
 
             let text = value;
             this.tasks.push({
